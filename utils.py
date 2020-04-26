@@ -6,6 +6,8 @@ from numpy import load
 from os import listdir
 from os.path import isdir
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+from matplotlib.patches import Circle
 from numpy import expand_dims
 from random import choice
 from numpy import load
@@ -24,17 +26,17 @@ def extract_face(filename, required_size=(160, 160)):
     x2, y2 = x1 + width, y1 + height
     face = pixels[y1:y2, x1:x2]
     
-    image = Image.fromarray(face)
-    image = image.resize(required_size)
-    face_array = asarray(image)
+    image_ori = Image.fromarray(face)
+    image_resize = image_ori.resize(required_size)
+    face_array = asarray(image_resize)
     
-    return face_array
+    return face_array, image_ori
 
 def load_faces(directory):
     faces = list()
     for filename in listdir(directory):
         path = directory + filename
-        face = extract_face(path)
+        face, image = extract_face(path)
         faces.append(face)
         
     return faces
@@ -74,3 +76,17 @@ def preprocessing(X, model_facenet):
     X_prep = in_encoder.transform(X_prep)
 
     return X_prep
+
+def draw_image_with_boxes(directory, filename, result_list):
+    data = plt.imread(directory + filename)
+    plt.figure(figsize=(20,10))
+    plt.imshow(data)
+    ax = plt.gca()
+    for result in result_list:
+        x, y, width, height = result['box']
+        rect = Rectangle((x, y), width, height, fill=False, color='red')
+        ax.add_patch(rect)
+        for key, value in result['keypoints'].items():
+            dot = Circle(value, radius=2, color='red')
+            ax.add_patch(dot)
+    plt.show()

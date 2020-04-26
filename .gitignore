@@ -1,0 +1,20 @@
+images/train/*
+!images/train/Steve Rogers
+!images/train/Thor
+!images/train/Tony Stark
+
+images/test/*
+!images/test/Steve Rogers
+!images/test/Thor
+!images/test/Tony Stark
+
+images/predict_images/*
+!images/predict_images/avengers_1.jpg
+!images/predict_images/avengers_2.jpg
+!images/predict_images/avengers_3.jpg
+
+model/*
+
+__pycache__/
+.ipynb_checkpoints/
+.git
