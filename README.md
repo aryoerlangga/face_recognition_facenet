@@ -18,7 +18,7 @@ face_recognition_facenet
         |-- [Another Person n]
 ```
 3. After running the scripts, a face recognition model will be saved under `facereco.pkl` inside [model](model) folder, along with `target_encoder.pkl` as encoder
-4. If you wish to predict an image using trained model, please put the image inside [predict_images](images/predict_images) folder. Use script [predict.py](scripts/predict.py). The prediction result will appear like following example.
+4. If you wish to predict an image using trained model, please put the image inside [predict_images](images/predict_images) folder. Use script [predict.py](scripts/predict.py) to predict. The prediction result will appear like following example.
 
 ![recognized the face!](images/result_example)
 
