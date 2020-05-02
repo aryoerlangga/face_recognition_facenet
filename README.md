@@ -4,7 +4,7 @@ This repository contains the demonstration on how to do facial recognition using
 
 ### **How to use**
 1. A pre-trained Keras Facenet model will be used to predict the embedding of an image. The model is provided by [Hiroki Taniai](https://github.com/nyoki-mtl/keras-facenet), and can be downloaded [here](https://drive.google.com/drive/folders/12aMYASGCKvDdkygSv1yQq8ns03AStDO_). Please save the downloaded model in [model](model) folder for code functionality.
-2. Run the scripts [train.py](scripts/train.py) to train the model. However, the model is trained only using provided images inside [train folder](images/train.py). You can train using more images or label by adding them into the folder. Train folder structure are below.
+2. Run the scripts [train.py](scripts/train.py) to train the model. However, the model is trained only using provided images inside [train folder](images/train). You can train using more images or label by adding them into the folder. Train folder structure are below.
 
 ```
 face_recognition_facenet
