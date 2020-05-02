@@ -26,6 +26,6 @@ face_recognition_facenet
 1. [MTCNN_demo](notebook_demo/MTCNN_demo.ipynb) </br>
 Face detection using MTCNN
 2. [train_demo](notebook_demo/train_demo.ipynb) </br>
-Step by step on how to train the model
+Step by step on how to train the model, along with the accuracy performance of the model
 3. [predict_demo](notebook_demo/predict_demo.ipynb) </br>
 Predict certain image using [predict.py](scripts/predict.py) script
