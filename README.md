@@ -3,8 +3,9 @@
 This repository contains the demonstration on how to do facial recognition using facenet network. The code are heavily inspired by following [article](https://machinelearningmastery.com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/)
 
 ### **How to use**
-1. A pre-trained Keras Facenet model will be used to predict the embedding of an image. The model is provided by [Hiroki Taniai](https://github.com/nyoki-mtl/keras-facenet), and can be downloaded [here](https://drive.google.com/drive/folders/12aMYASGCKvDdkygSv1yQq8ns03AStDO_). Please save the downloaded model in [model](model) folder for code functionality.
-2. Run the scripts [train.py](scripts/train.py) to train the model. However, the model is trained only using provided images inside [train folder](images/train). You can train using more images or label by adding them into the folder. Train folder structure are below.
+1. Clone the repo into home directory
+2. A pre-trained Keras Facenet model will be used to predict the embedding of an image. The model is provided by [Hiroki Taniai](https://github.com/nyoki-mtl/keras-facenet), and can be downloaded [here](https://drive.google.com/drive/folders/12aMYASGCKvDdkygSv1yQq8ns03AStDO_). Please save the downloaded model in [model](model) folder for code functionality.
+3. Run the scripts [train.py](scripts/train.py) to train the model. However, the model is trained only using provided images inside [train folder](images/train). You can train using more images or label by adding them into the folder. Train folder structure are below.
 
 ```
 face_recognition_facenet
@@ -17,8 +18,8 @@ face_recognition_facenet
         |-- [Another Person 2]
         |-- [Another Person n]
 ```
-3. After running the scripts, a face recognition model will be saved under `facereco.pkl` inside [model](model) folder, along with `target_encoder.pkl` as encoder
-4. If you wish to predict an image using trained model, please put the image inside [predict_images](images/predict_images) folder. Use script [predict.py](scripts/predict.py) to predict. The prediction result will appear like following example.
+4. After running the scripts, a face recognition model will be saved under `facereco.pkl` inside [model](model) folder, along with `target_encoder.pkl` as encoder
+5. If you wish to predict an image using trained model, please put the image inside [predict_images](images/predict_images) folder. Use script [predict.py](scripts/predict.py) to predict. The prediction result will appear like following example.
 
 ![recognized the face!](images/result_example)
 
