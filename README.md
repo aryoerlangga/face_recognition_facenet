@@ -23,7 +23,7 @@ face_recognition_facenet
 
 ![recognized the face!](images/result_example_2.png)
 
-### **Norebook demo**
+### **Notebook demo**
 1. [MTCNN_demo](notebook_demo/MTCNN_demo.ipynb) </br>
 Face detection using MTCNN
 2. [train_demo](notebook_demo/train_demo.ipynb) </br>
